@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fragrance Guardian — Travel Cases for Collectors</title>
-  <meta name="description" content="Purpose-built travel protection for your fragrance collection. No more socks-and-prayers. Launching 2026.">
+  <title>Fragrance Guardian — The Ultimate Protection System for Fragrances</title>
+  <meta name="description" content="A case designed for fragrances. Organized storage, durable insulated design, built for travel. Founded by Lucas Giraldo.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after {
       margin: 0;
@@ -27,6 +27,8 @@
       --muted: #7a7468;
       --border: #2a2722;
       --border-light: #3a3630;
+      --green: #4ade80;
+      --red: #ef4444;
       --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       --serif: 'DM Serif Display', Georgia, serif;
     }
@@ -167,8 +169,20 @@
       line-height: 1.75;
       color: var(--cream-dim);
       font-weight: 300;
-      margin-bottom: 2.5rem;
+      margin-bottom: 1rem;
       max-width: 420px;
+    }
+
+    .hero-text .founder {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.03em;
+    }
+
+    .hero-text .founder strong {
+      color: var(--cream-dim);
+      font-weight: 500;
     }
 
     .hero-visual {
@@ -253,13 +267,13 @@
       gap: 2rem;
     }
 
-    /* --- THE PITCH (replaces problem/solution) --- */
-    .pitch {
+    /* --- PROBLEM SECTION --- */
+    .problem {
       padding: 7rem 2.5rem;
       position: relative;
     }
 
-    .pitch::before {
+    .problem::before {
       content: '';
       position: absolute;
       bottom: 0;
@@ -269,17 +283,17 @@
       background: linear-gradient(90deg, transparent, var(--border-light), transparent);
     }
 
-    .pitch-inner {
+    .problem-inner {
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    .pitch-header {
+    .problem-header {
       max-width: 680px;
       margin-bottom: 4rem;
     }
 
-    .pitch-header h2 {
+    .problem-header h2 {
       font-family: var(--serif);
       font-size: clamp(1.8rem, 3.5vw, 2.8rem);
       font-weight: 400;
@@ -287,7 +301,12 @@
       margin-bottom: 1.25rem;
     }
 
-    .pitch-header p {
+    .problem-header h2 em {
+      font-style: italic;
+      color: var(--tan);
+    }
+
+    .problem-header p {
       font-size: 1rem;
       line-height: 1.8;
       color: var(--cream-dim);
@@ -295,7 +314,100 @@
       max-width: 520px;
     }
 
-    .pitch-grid {
+    .problem-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .problem-stat {
+      padding: 2.5rem 2.5rem;
+      background: var(--bg-warm);
+    }
+
+    .problem-stat .big-number {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
+      color: var(--cream);
+      margin-bottom: 0.5rem;
+    }
+
+    .problem-stat h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+      line-height: 1.35;
+    }
+
+    .problem-stat p {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: var(--cream-dim);
+      font-weight: 300;
+    }
+
+    .problem-stat .source {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-top: 0.75rem;
+      letter-spacing: 0.04em;
+    }
+
+    /* --- SOLUTION SECTION --- */
+    .solution {
+      padding: 7rem 2.5rem;
+      background: var(--bg-warm);
+      position: relative;
+    }
+
+    .solution::before,
+    .solution::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-light), transparent);
+    }
+
+    .solution::before { top: 0; }
+    .solution::after { bottom: 0; }
+
+    .solution-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .solution-header {
+      max-width: 600px;
+      margin-bottom: 3.5rem;
+    }
+
+    .solution-header h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .solution-header p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--cream-dim);
+      font-weight: 300;
+    }
+
+    .solution-header p strong {
+      color: var(--cream);
+      font-weight: 500;
+    }
+
+    .solution-features {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 1px;
@@ -305,22 +417,27 @@
       overflow: hidden;
     }
 
-    .pitch-card {
+    .solution-feature {
       padding: 2.5rem 2rem;
-      background: var(--bg-warm);
+      background: var(--bg-card);
       display: flex;
       flex-direction: column;
     }
 
-    .pitch-card .label {
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 1rem;
+    .solution-feature .feature-icon {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--tan);
     }
 
-    .pitch-card h3 {
+    .solution-feature h3 {
       font-family: var(--serif);
       font-size: 1.3rem;
       font-weight: 400;
@@ -328,22 +445,119 @@
       line-height: 1.3;
     }
 
-    .pitch-card p {
+    .solution-feature p {
       font-size: 0.88rem;
       line-height: 1.7;
       color: var(--cream-dim);
       font-weight: 300;
     }
 
-    /* --- WHAT IT IS --- */
-    .what {
+    /* --- COMPETITION TABLE --- */
+    .competition {
+      padding: 7rem 2.5rem;
+      position: relative;
+    }
+
+    .competition::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-light), transparent);
+    }
+
+    .competition-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .competition-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .competition-header h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .competition-header p {
+      font-size: 1rem;
+      color: var(--cream-dim);
+      font-weight: 300;
+    }
+
+    .comp-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .comp-table thead th {
+      background: var(--bg-warm);
+      padding: 1.2rem 1rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--tan);
+      font-weight: 500;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .comp-table thead th:first-child {
+      text-align: left;
+      padding-left: 1.5rem;
+    }
+
+    .comp-table tbody td {
+      padding: 1.2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+
+    .comp-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .comp-table tbody td:first-child {
+      text-align: left;
+      padding-left: 1.5rem;
+      font-weight: 500;
+      color: var(--cream);
+    }
+
+    .comp-table tbody tr.highlight td {
+      background: var(--bg-warm);
+    }
+
+    .comp-table tbody tr.highlight td:first-child {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .check { color: var(--green); font-size: 1.2rem; }
+    .cross { color: var(--red); font-size: 1.2rem; }
+
+    /* --- MARKET SIZE --- */
+    .market {
       padding: 7rem 2.5rem;
       background: var(--bg-warm);
       position: relative;
     }
 
-    .what::before,
-    .what::after {
+    .market::before,
+    .market::after {
       content: '';
       position: absolute;
       left: 0;
@@ -352,76 +566,72 @@
       background: linear-gradient(90deg, transparent, var(--border-light), transparent);
     }
 
-    .what::before { top: 0; }
-    .what::after { bottom: 0; }
+    .market::before { top: 0; }
+    .market::after { bottom: 0; }
 
-    .what-inner {
-      max-width: 1200px;
+    .market-inner {
+      max-width: 900px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 5fr 6fr;
-      gap: 6rem;
-      align-items: start;
     }
 
-    .what-sticky {
-      position: sticky;
-      top: 6rem;
+    .market-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
     }
 
-    .what-sticky h2 {
+    .market-header h2 {
       font-family: var(--serif);
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
       font-weight: 400;
-      line-height: 1.25;
-      margin-bottom: 1.25rem;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
     }
 
-    .what-sticky p {
-      font-size: 0.95rem;
-      color: var(--cream-dim);
-      line-height: 1.8;
-      font-weight: 300;
-    }
-
-    .what-details {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .what-item {
-      padding: 2rem 0;
-      border-bottom: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: 3rem 1fr;
-      gap: 1.5rem;
-      align-items: start;
-    }
-
-    .what-item:first-child { padding-top: 0; }
-    .what-item:last-child { border-bottom: none; }
-
-    .what-item .num {
-      font-family: var(--serif);
-      font-size: 1.6rem;
-      color: var(--tan);
-      line-height: 1;
-      padding-top: 0.15rem;
-    }
-
-    .what-item h3 {
+    .market-header p {
       font-size: 1rem;
-      font-weight: 500;
-      margin-bottom: 0.4rem;
-      letter-spacing: 0.01em;
+      color: var(--cream-dim);
+      font-weight: 300;
     }
 
-    .what-item p {
-      font-size: 0.88rem;
+    .market-funnel {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .market-tier {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg);
+      transition: border-color 0.3s;
+    }
+
+    .market-tier:hover {
+      border-color: var(--border-light);
+    }
+
+    .market-tier .tier-label {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: var(--tan);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.04em;
+    }
+
+    .market-tier .tier-number {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--cream);
+      margin-bottom: 0.5rem;
+    }
+
+    .market-tier .tier-desc {
+      font-size: 0.85rem;
       color: var(--cream-dim);
-      line-height: 1.7;
       font-weight: 300;
+      line-height: 1.6;
     }
 
     /* --- QUOTE --- */
@@ -474,48 +684,6 @@
     .quote-inner cite strong {
       color: var(--cream-dim);
       font-weight: 500;
-    }
-
-    /* --- TRACTION --- */
-    .traction {
-      padding: 6rem 2.5rem;
-      background: var(--bg-warm);
-      position: relative;
-    }
-
-    .traction::before,
-    .traction::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--border-light), transparent);
-    }
-    .traction::before { top: 0; }
-    .traction::after { bottom: 0; }
-
-    .traction-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 2rem;
-      text-align: center;
-    }
-
-    .traction-stat .number {
-      font-family: var(--serif);
-      font-size: clamp(2.2rem, 4vw, 3rem);
-      color: var(--cream);
-      margin-bottom: 0.3rem;
-    }
-
-    .traction-stat .desc {
-      font-size: 0.82rem;
-      color: var(--muted);
-      line-height: 1.55;
-      font-weight: 300;
     }
 
     /* --- WAITLIST --- */
@@ -690,22 +858,22 @@
 
       .hero { padding: 7rem 1.5rem 3rem; min-height: auto; }
 
-      .pitch-grid {
+      .problem-stats {
         grid-template-columns: 1fr;
       }
 
-      .what-inner {
+      .solution-features {
         grid-template-columns: 1fr;
-        gap: 3rem;
       }
 
-      .what-sticky {
-        position: static;
+      .comp-table {
+        font-size: 0.85rem;
       }
 
-      .traction-inner {
+      .market-funnel {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        max-width: 400px;
+        margin: 0 auto;
       }
     }
 
@@ -722,12 +890,20 @@
         gap: 1rem;
       }
 
-      .pitch, .what, .quote-section, .traction, .waitlist {
+      .problem, .solution, .competition, .market, .quote-section, .waitlist {
         padding-left: 1.25rem;
         padding-right: 1.25rem;
       }
 
-      .pitch-card { padding: 2rem 1.5rem; }
+      .comp-table thead th,
+      .comp-table tbody td {
+        padding: 0.8rem 0.5rem;
+        font-size: 0.75rem;
+      }
+
+      .comp-table thead th {
+        font-size: 0.65rem;
+      }
 
       .waitlist-form {
         flex-direction: column;
@@ -746,7 +922,8 @@
   <nav>
     <div class="logo">Fragrance Guardian</div>
     <div class="nav-links">
-      <a href="#about">About</a>
+      <a href="#problem">Problem</a>
+      <a href="#solution">Solution</a>
       <a href="#waitlist">Waitlist</a>
       <a href="#waitlist" class="nav-btn">Get Early Access</a>
     </div>
@@ -757,11 +934,12 @@
     <div class="hero-inner">
       <div class="hero-text">
         <p class="overline reveal">Launching 2026</p>
-        <h1 class="reveal reveal-delay-1">Your bottles survived the checkout.<br><em>Now survive the trip.</em></h1>
-        <p class="lead reveal reveal-delay-2">Fragrance Guardian is a purpose-built travel case for collectors who are tired of wrapping bottles in socks and hoping for the best.</p>
+        <h1 class="reveal reveal-delay-1">The ultimate protection system <em>for fragrances.</em></h1>
+        <p class="lead reveal reveal-delay-2">A case designed for fragrances. Organized storage, durable insulated design, built for travel.</p>
+        <p class="founder reveal reveal-delay-2">Founded by <strong>Lucas Giraldo</strong></p>
         <div class="hero-actions reveal reveal-delay-3">
           <a href="#waitlist" class="btn btn-fill">Join the waitlist</a>
-          <a href="#about" class="btn btn-ghost">How it works <span class="arrow">&darr;</span></a>
+          <a href="#problem" class="btn btn-ghost">Learn more <span class="arrow">&darr;</span></a>
         </div>
       </div>
       <div class="hero-visual reveal reveal-delay-2">
@@ -773,76 +951,134 @@
     </div>
   </section>
 
-  <!-- THE PITCH -->
-  <section class="pitch" id="about">
-    <div class="pitch-inner">
-      <div class="pitch-header reveal">
-        <h2>You've spent hundreds building your collection. Every trip puts it at risk.</h2>
-        <p>Checked bags get thrown. Cabin pressure loosens caps. And there's no product on the market actually designed for fragrance bottles. Until now.</p>
+  <!-- PROBLEM -->
+  <section class="problem" id="problem">
+    <div class="problem-inner">
+      <div class="problem-header reveal">
+        <h2>Traveling with fragrances puts them <em>at risk.</em></h2>
+        <p>Fragrance collectors spend hundreds on their bottles. Every trip risks broken glass, leaked perfume, and ruined luggage.</p>
       </div>
 
-      <div class="pitch-grid">
-        <div class="pitch-card reveal">
-          <span class="label">The risk</span>
-          <h3>Glass doesn't forgive</h3>
-          <p>One rough baggage handler. One tumble in an overhead bin. A $200 bottle of Baccarat Rouge becomes a stain on your clothes and a story you wish you didn't have.</p>
+      <div class="problem-stats">
+        <div class="problem-stat reveal">
+          <div class="big-number">81%</div>
+          <h3>of fragrance users fear bottle damage when traveling</h3>
+          <p>The vast majority of collectors avoid bringing their favorite bottles on trips entirely.</p>
+          <div class="source">&mdash; Our Survey</div>
         </div>
-        <div class="pitch-card reveal reveal-delay-1">
-          <span class="label">The hack</span>
-          <h3>Socks aren't a strategy</h3>
-          <p>We've all done it. Wrap it in a t-shirt, stuff it in a shoe, stick it in a ziplock. It works until it doesn't. And you never know which trip will be the one.</p>
-        </div>
-        <div class="pitch-card reveal reveal-delay-2">
-          <span class="label">The fix</span>
-          <h3>A case that actually fits</h3>
-          <p>Fragrance Guardian is shaped around bottles, not the other way around. Shock-absorbing walls, a seal that prevents leaks, and a footprint that fits in any carry-on.</p>
+        <div class="problem-stat reveal reveal-delay-1">
+          <div class="big-number">$100&ndash;$200</div>
+          <h3>average cost per luxury fragrance bottle</h3>
+          <p>One broken bottle means losing a significant investment &mdash; plus the damage to your clothes and luggage.</p>
+          <div class="source">&mdash; Scento.com</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHAT IT IS -->
-  <section class="what">
-    <div class="what-inner">
-      <div class="what-sticky reveal">
-        <h2>Designed for the way collectors actually travel</h2>
-        <p>We talked to hundreds of fragrance enthusiasts before sketching a single line. Every detail comes from a real frustration.</p>
+  <!-- SOLUTION -->
+  <section class="solution" id="solution">
+    <div class="solution-inner">
+      <div class="solution-header reveal">
+        <h2>A case designed for fragrances</h2>
+        <p>Fragrance Guardian is <strong>purpose-built</strong> to keep your bottles safe, organized, and ready to travel.</p>
       </div>
-      <div class="what-details">
-        <div class="what-item reveal">
-          <div class="num">1</div>
-          <div>
-            <h3>Bottle-specific cradles</h3>
-            <p>Adjustable inserts that hold 50ml to 100ml bottles upright and snug. No rattling, no shifting, no contact between glass surfaces.</p>
-          </div>
+
+      <div class="solution-features">
+        <div class="solution-feature reveal">
+          <div class="feature-icon">&#9744;</div>
+          <h3>Organized storage</h3>
+          <p>Purpose-built cradles hold your bottles upright and snug. No rattling, no shifting, no glass-on-glass contact.</p>
         </div>
-        <div class="what-item reveal">
-          <div class="num">2</div>
-          <div>
-            <h3>Shock-absorbing shell</h3>
-            <p>Multi-layer walls designed to absorb impact from drops, tosses, and the general violence of airline baggage handling.</p>
-          </div>
+        <div class="solution-feature reveal reveal-delay-1">
+          <div class="feature-icon">&#9830;</div>
+          <h3>Durable &amp; insulated</h3>
+          <p>Multi-layer insulated walls absorb impact from drops, tosses, and the general violence of airline baggage handling.</p>
         </div>
-        <div class="what-item reveal">
-          <div class="num">3</div>
-          <div>
-            <h3>Leak-proof seal</h3>
-            <p>Even if a cap loosens, the sealed interior keeps everything contained. Your clothes stay clean. Your luggage stays dry.</p>
-          </div>
+        <div class="solution-feature reveal reveal-delay-2">
+          <div class="feature-icon">&#9992;</div>
+          <h3>Built for travel</h3>
+          <p>Compact enough to tuck into a carry-on. Leak-proof seal keeps everything contained even if a cap loosens.</p>
         </div>
-        <div class="what-item reveal">
-          <div class="num">4</div>
-          <div>
-            <h3>Carry-on friendly</h3>
-            <p>Compact enough to tuck into a weekender or a carry-on pocket. No wasted space, no awkward shapes.</p>
-          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPETITION -->
+  <section class="competition" id="competition">
+    <div class="competition-inner">
+      <div class="competition-header reveal">
+        <h2>How we compare</h2>
+        <p>No other product checks every box for fragrance travel protection.</p>
+      </div>
+
+      <table class="comp-table reveal">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Protection</th>
+            <th>Durability</th>
+            <th>Affordability</th>
+            <th>Luxury Appeal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight">
+            <td>Fragrance Guardian</td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Luxury Cases</td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Generic Bag</td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+          </tr>
+          <tr>
+            <td>Makeshift (socks, etc.)</td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- MARKET SIZE -->
+  <section class="market">
+    <div class="market-inner">
+      <div class="market-header reveal">
+        <h2>Target Market</h2>
+        <p>Start simple, then scale.</p>
+      </div>
+
+      <div class="market-funnel">
+        <div class="market-tier reveal">
+          <div class="tier-label">TAM</div>
+          <div class="tier-number">60&ndash;75M</div>
+          <div class="tier-desc">People who own fragrance and travel</div>
         </div>
-        <div class="what-item reveal">
-          <div class="num">5</div>
-          <div>
-            <h3>Opens in two seconds</h3>
-            <p>Magnetic closure. Pop it open, swap your bottle, close it, go. No zippers to fumble, no latches to break.</p>
-          </div>
+        <div class="market-tier reveal reveal-delay-1">
+          <div class="tier-label">SAM</div>
+          <div class="tier-number">15&ndash;20M</div>
+          <div class="tier-desc">People who travel with fragrances</div>
+        </div>
+        <div class="market-tier reveal reveal-delay-2">
+          <div class="tier-label">SOM</div>
+          <div class="tier-number">2&ndash;5M</div>
+          <div class="tier-desc">Fragrance enthusiasts and collectors</div>
         </div>
       </div>
     </div>
@@ -852,26 +1088,8 @@
   <section class="quote-section">
     <div class="quote-inner reveal">
       <div class="quote-mark">&ldquo;</div>
-      <blockquote>We asked our community one question: what's stopping you from traveling with your full collection? The answer was almost always the same &mdash; fear of breaking something irreplaceable.</blockquote>
-      <cite><strong>The Fragrance Guardian team</strong> &middot; based on 2,400+ survey responses</cite>
-    </div>
-  </section>
-
-  <!-- TRACTION -->
-  <section class="traction">
-    <div class="traction-inner">
-      <div class="traction-stat reveal">
-        <div class="number">2,400+</div>
-        <div class="desc">Survey responses from<br>fragrance collectors</div>
-      </div>
-      <div class="traction-stat reveal reveal-delay-1">
-        <div class="number">83%</div>
-        <div class="desc">Said they've avoided bringing<br>bottles on a trip</div>
-      </div>
-      <div class="traction-stat reveal reveal-delay-2">
-        <div class="number">0</div>
-        <div class="desc">Purpose-built fragrance<br>travel cases on the market</div>
-      </div>
+      <blockquote>81% of fragrance users fear bottle damage when traveling. Most luxury fragrances cost $100&ndash;$200 per bottle. There's no purpose-built solution on the market &mdash; until now.</blockquote>
+      <cite><strong>Lucas Giraldo</strong> &middot; Founder, Fragrance Guardian</cite>
     </div>
   </section>
 
@@ -895,7 +1113,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2026 Fragrance Guardian</p>
+    <p>&copy; 2026 Fragrance Guardian &middot; Founded by Lucas Giraldo</p>
     <div class="footer-links">
       <a href="mailto:hello@fragranceguardian.com">Contact</a>
       <a href="#waitlist">Waitlist</a>
